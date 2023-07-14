@@ -10,7 +10,7 @@ export class exceptionFilter implements ExceptionFilter{
         const request = ctx.getRequest<Request>()
         const response = ctx.getResponse<Response>()
 
-        const statusCode = exception.getStatus()
+        const statusCode = exception.getStatus();
 
         response.status(statusCode).json({
             statusCode,
